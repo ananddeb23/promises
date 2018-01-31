@@ -1,7 +1,7 @@
 const { attachTitle, promise } = require('./values8');
 
-describe('Testing the function promise', () => {
-  it('function logs to console correctly', async () => {
+describe('Testing the  promise', () => {
+  it('should concat correctly', async () => {
     await promise.then(attachTitle).then((msg) => { expect(msg).toBe('DR. MANHATTAN'); });
   });
 });
@@ -11,8 +11,8 @@ describe('Testing attachtitle', () => {
     expect(attachTitle('Anand')).toBe('DR. Anand');
   });
 
-  it('function logs to console correctly', () => {
+  it('expect attach title to return expected string length', () => {
     const str = 'Anand';
-    expect(attachTitle(str).length).toEqual(3 + str.length);
+    expect(attachTitle(str).length).toEqual(4 + str.length);
   });
 });

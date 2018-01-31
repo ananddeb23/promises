@@ -2,12 +2,12 @@ require('es6-promise');
 
 const attachTitle = arg => `DR. ${arg}`;
 
-const promise = new Promise((fulfill, reject) => {
-  fulfill('MANHATTAN');
+const promise = new Promise((resolve, reject) => {
+  resolve('MANHATTAN');
 });
 
 promise.then(attachTitle).then(console.log);
 
 
-module.exports = promise;
-module.exports = attachTitle;
+module.exports.promise = promise;
+module.exports.attachTitle = attachTitle;

@@ -1,7 +1,7 @@
 require('es6-promise');
 
-const promise = new Promise((fulfill, reject) => {
-  fulfill('PROMISE VALUE');
+const promise = new Promise((resolve, reject) => {
+  resolve('PROMISE VALUE');
 });
 
 promise.then(console.log, null);

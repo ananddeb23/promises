@@ -8,7 +8,7 @@ function parsePromised(arg) {
     // resolve(val);
     } catch (e) {
       // console.log(e);
-      reject(e.message);
+      reject(e);
     }
     resolve(objjson);
   });

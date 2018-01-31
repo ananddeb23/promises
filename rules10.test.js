@@ -21,6 +21,9 @@ describe('Testing the always throws function ', () => {
       promisecall.alwaysThrows();
     }).toThrow();
   });
+  it('It must throws an error ', () => {
+    expect(promisecall.alwaysThrows).toThrow('OH NOES');
+  });
   // test('throws on octopus', () => {
   //   function drinkOctopus() {
   //     promisecall.alwaysThrows();

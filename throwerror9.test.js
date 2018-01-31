@@ -9,16 +9,7 @@ describe('testing ', () => {
       done();
     });
   });
-  it('testing invalid json', (done) => {
-    // const obj1 = { name: 'Anand', age: 21 };
-    // const obj1str = JSON.stringify(obj1);
-    throwerror.parsePromised('123').catch((error) => {
-      // console.log(error);
-      expect(error).toMatch(/Unexpected token/i);
 
-      done();
-    });
-  });
   it('testing empty json', (done) => {
     const obj1 = { };
     const obj1str = JSON.stringify(obj1);
@@ -26,5 +17,10 @@ describe('testing ', () => {
       expect(obj2).toEqual(obj1);
       done();
     });
+  });
+});
+describe('Testing the promise to reject', () => {
+  it('invalid json must return error', async () => {
+    await throwerror.parsePromised('wewe').then(undefined, (err) => { expect(err).toBe('Unexpected token w in JSON at position 0'); });
   });
 });

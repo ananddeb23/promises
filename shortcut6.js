@@ -1,10 +1,10 @@
 require('es6-promise');
 
-const promise1 = new Promise((fulfill, reject) => {
+const promise1 = new Promise((resolve, reject) => {
   reject(new Error('ERROR!!!!'));
 });
 function onreject(err) {
-  console.error('There is an error', err.message);
+  console.log(err.message);
 }
 promise1.catch(onreject);
 const promise2 = Promise.resolve('HELLO SUCCESS!');
