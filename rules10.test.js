@@ -14,6 +14,7 @@ describe('Testing the iterate function ', () => {
     expect((promisecall.iterate(no))).toBe(no + 1);
   });
 });
+
 describe('Testing the always throws function ', () => {
   it('It must throws an error ', () => {
     expect(() => {
@@ -28,4 +29,13 @@ describe('Testing the always throws function ', () => {
   //   // Test the exact error message
   //   expect(drinkOctopus).toThrowError('12345110error');
   // });
+});
+
+describe('Testing the promise ', () => {
+  it('sequnce of executions must be till first reject ', async () => {
+    await promisecall.callpromise(1).then(undefined, (err) => { expect(err).toBe('12345error'); });
+  });
+  it('sequnce of executions must be till first reject ', async () => {
+    await promisecall.callpromise(1).then(undefined, (err) => { expect(err).toBe('error'); });
+  });
 });
