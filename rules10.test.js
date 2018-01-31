@@ -14,3 +14,18 @@ describe('Testing the iterate function ', () => {
     expect((promisecall.iterate(no))).toBe(no + 1);
   });
 });
+describe('Testing the always throws function ', () => {
+  it('It must throws an error ', () => {
+    expect(() => {
+      promisecall.alwaysThrows();
+    }).toThrow();
+  });
+  // test('throws on octopus', () => {
+  //   function drinkOctopus() {
+  //     promisecall.alwaysThrows();
+  //   }
+  //
+  //   // Test the exact error message
+  //   expect(drinkOctopus).toThrowError('12345110error');
+  // });
+});
